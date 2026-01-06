@@ -70,3 +70,101 @@ Learning curves and result plots are included in the repository.
 
 ## 🛠️ Repository Structure
 
+
+
+
+## 📂 Repository Structure
+
+```
+drl-ris-wireless-optimization/
+├── main.py                    # Training loop (SAC-based)
+├── environment.py             # Wireless system environment
+├── SAC.py                     # Soft Actor-Critic implementation
+├── Beta_Space_Exp_SAC.py      # β-space exploration agent
+├── utils.py                   # Helper functions
+├── avg_plot.py                # Result aggregation
+├── learning_curve.png         # Learning curves
+├── requirements.txt           # Dependencies
+├── baselines/
+│  └── sinr-model-training/     # Reproduced DDPG baseline implementation
+│     ├── DDPG.py
+│     ├── main.py
+│     ├── reproduce.py
+│     ├── environment.py
+│     ├── utils.py
+│     ├── requirements.txt
+│     └── README.md                # Attribution and usage notes
+└── README.md                  # This file
+```
+
+---
+
+## 📆 Installation
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/garg-khushi/drl-ris-wireless-optimization.git
+cd drl-ris-wireless-optimization
+```
+
+### 2️⃣ Create and activate a virtual environment (recommended)
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3️⃣ Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Running the SAC-Based Training
+
+To train the proposed SAC-based agent:
+
+```bash
+python main.py
+```
+
+⚠️ **Training is computationally intensive.**
+GPU acceleration is recommended for extended experiments.
+
+---
+
+## 📚 Baseline Implementations
+
+Baseline DRL implementations (DDPG-based) used for reproduction and comparison are provided under:
+
+```bash
+baselines/sinr-model-training/
+```
+
+These baselines are:
+
+- Clearly isolated from the proposed methods
+- Fully attributed to original authors
+- Included strictly for research comparison and reproducibility
+
+---
+
+## 📄 Research Context
+
+This work is documented in:
+
+- A detailed internship report
+- A conference paper draft (under preparation)
+
+---
+
+## ⚠️ Notes
+
+- Training is computationally expensive
+- Convergence under impulsive noise remains an open research challenge
+- Code is intended for research and experimentation, not production deployment
+
+---
+
+## 📜 License
+MIT License
